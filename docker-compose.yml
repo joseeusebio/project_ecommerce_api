@@ -1,0 +1,25 @@
+version: '3.10'
+
+services:
+  djangoapi:
+    container_name: djangoapi
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./djangoapi:/djangoapi
+      - ./data/web/static:/data/web/static/
+      - ./data/web/media:/data/web/media/
+    env_file:
+      - ./dotenv_files/.env
+    depends_on:
+      - db
+  db:
+    image: postgres:13-alpine
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres/data:/var/lib/postgresql/data/
+    env_file:
+      - ./dotenv_files/.env
