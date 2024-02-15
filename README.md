@@ -6,7 +6,7 @@ Api Rest para gestão de produtos em um Ecommerce
 Siga os passos abaixo para conseguir utilizar o sistema
 
 ### Clonar o repositório
-1. git clone https://github.com/joseeusebio/project_bringel.git
+1. git clone [https://github.com/joseeusebio/project_bringel.git](https://github.com/joseeusebio/project_ecommerce_api.git)
 
 ### Criação de um Virtual Enviroment
 1. python -m venv .venv
